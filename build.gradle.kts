@@ -6,6 +6,12 @@ plugins {
     alias(libs.plugins.spotless)
 }
 
+buildscript {
+    dependencies {
+        classpath(libs.ktlint)
+    }
+}
+
 configure<com.diffplug.gradle.spotless.SpotlessExtension> {
     kotlin {
         ktlint("1.5.0")
@@ -16,6 +22,11 @@ configure<com.diffplug.gradle.spotless.SpotlessExtension> {
                     "ktlint_standard_no-wildcard-imports" to "disabled",
                     "ktlint_standard_function-naming" to "disabled",
                 ),
+            )
+            .customRuleSets(
+                listOf(
+                    "io.nlopez.compose.rules:ktlint:0.4.22"
+                )
             )
         target("**/*.kt")
         targetExclude("**/build/**")
