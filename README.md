@@ -11,6 +11,26 @@ Spotless + Compose rules を試す
 -   [Spotless](https://github.com/diffplug/spotless) - コードフォーマッター
 -   [Compose Rules](https://github.com/mrmans0n/compose-rules) - Jetpack Compose 用のリントルール
 
+## Git Hooks
+
+このプロジェクトでは、コードの品質を保つために Git Hooks を使用しています。
+
+### 設定されている Hooks
+
+| Hook       | 説明                                               | タイミング |
+| ---------- | -------------------------------------------------- | ---------- |
+| pre-commit | `spotlessCheck` を実行し、コードスタイルをチェック | コミット前 |
+
+### Hooks の設定方法
+
+プロジェクトをクローンした後、以下のコマンドを実行して Git Hooks を有効にしてください：
+
+```shell
+git config core.hooksPath .githooks
+```
+
+これにより、コミット時に自動的にコードスタイルがチェックされ、問題がある場合はコミットがブロックされます。
+
 ## コマンド一覧
 
 | コマンド                        | 説明                                            | 実行タイミング        |
