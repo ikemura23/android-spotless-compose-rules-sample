@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "android-compose-rules-sample"
 include(":app")
- 
