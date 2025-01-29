@@ -22,11 +22,10 @@ configure<com.diffplug.gradle.spotless.SpotlessExtension> {
                     "ktlint_standard_no-wildcard-imports" to "disabled",
                     "ktlint_standard_function-naming" to "disabled",
                 ),
-            )
-            .customRuleSets(
+            ).customRuleSets(
                 listOf(
-                    "io.nlopez.compose.rules:ktlint:0.4.22"
-                )
+                    "io.nlopez.compose.rules:ktlint:0.4.22",
+                ),
             )
         target("**/*.kt")
         targetExclude("**/build/**")
