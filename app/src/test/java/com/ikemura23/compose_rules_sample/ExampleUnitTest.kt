@@ -1,6 +1,6 @@
 package com.ikemura23.compose_rules_sample
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
