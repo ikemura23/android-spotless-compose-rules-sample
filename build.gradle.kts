@@ -12,13 +12,13 @@ configure<com.diffplug.gradle.spotless.SpotlessExtension> {
             .setEditorConfigPath("$projectDir/.editorconfig")
             .editorConfigOverride(
                 mapOf(
-                    "package-name" to "disabled",
+                    "ktlint_standard_package-name" to "disabled",
+                    "ktlint_standard_no-wildcard-imports" to "disabled",
+                    "ktlint_standard_function-naming" to "disabled",
                 ),
             )
         target("**/*.kt")
         targetExclude("**/build/**")
-        // trimTrailingWhitespace()
-        // endWithNewline()
     }
     kotlinGradle {
         target("*.gradle.kts")
